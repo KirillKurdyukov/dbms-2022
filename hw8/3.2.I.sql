@@ -1,0 +1,1 @@
+create index marks_to_courses_and_students on Marks using btree (Mark);

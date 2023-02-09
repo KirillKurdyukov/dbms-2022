@@ -1,0 +1,1 @@
+create index lecturer_id_to_courses on Plan using btree(LecturerId, CourseId);

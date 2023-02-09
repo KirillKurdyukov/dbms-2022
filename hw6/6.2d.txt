@@ -1,0 +1,9 @@
+Marked(StudentId, CourseId) :- Marks(StudentId, CourseId, _).
+GroupNotMarked(GroupId, CourseId) :-
+Students(StudentId, _, GroupId),
+Courses(CourseId, _),
+not Marked(StudentId, CourseId).
+GroupMarked(GroupName, CourseName) :-
+Courses(CourseId, CourseName),
+Groups(GroupId, GroupName),
+not GroupNotMarked(GroupId, CourseId).

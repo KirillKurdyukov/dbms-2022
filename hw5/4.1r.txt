@@ -1,0 +1,1 @@
+Students ∖ π {StudentId, StudentName, GroupId}(Students ⋈ Marks ⋈ σ{(CourseName = :CourseName)}(Courses))

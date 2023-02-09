@@ -1,0 +1,11 @@
+HaveCourse(StudentId, CourseId) :-
+Students(StudentId, _, GroupId),
+Plan(GroupId, CourseId, _).
+HaveMark(StudentId, CourseId) :-
+Students(StudentId, _, _),
+Marks(StudentId, CourseId, _).
+Ans(StudentName, CourseName) :-
+HaveCourse(StudentId, CourseId),
+not HaveMark(StudentId, CourseId),
+Courses(CourseId, CourseName),
+Students(StudentId, StudentName, _).

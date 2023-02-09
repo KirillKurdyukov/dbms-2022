@@ -1,0 +1,11 @@
+S(StudentId, StudentName, GroupName) :-
+Students(StudentId, StudentName, GroupId),
+Groups(GroupId, GroupName),
+Marks(StudentId, CourseId, Mark),
+Courses(CourseId, :CourseName).
+
+Ans(StudentId, StudentName, GroupName) :- Students(StudentId, StudentName, GroupId),
+                                          Groups(GroupId, GroupName),
+                                          Plan(GroupId, CourseId, LecturerId),
+                                          Courses(CourseId, :CourseName),
+                                          not S(StudentId, StudentName, GroupName).

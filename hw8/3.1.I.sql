@@ -1,0 +1,1 @@
+create index mark_course_id_to_students on Marks using btree (CourseId, Mark, StudentId);

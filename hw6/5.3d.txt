@@ -1,0 +1,6 @@
+HaveMark(StudentId, CourseId) :- Marks(StudentId, CourseId, _).
+HaveMarkStudent(StudentId) :- HaveMark(StudentId, _).
+CoursesLecturer(CourseId) :- Plan(_, CourseId, LecturerId), Lecturers(LecturerId, :LecturerName).
+BadCases(StudentId) :- Students(StudentId, _, _), CoursesLecturer(CourseId), not HaveMark(StudentId, CourseId).
+Result(StudentId) :- Students(StudentId, _, _), not BadCases(StudentId).
+

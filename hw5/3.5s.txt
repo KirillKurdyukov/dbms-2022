@@ -1,0 +1,5 @@
+select StudentId, StudentName, Students.GroupId
+from Students
+natural join Marks
+inner join Plan on Plan.CourseId = Marks.CourseId
+where Marks.Mark = :Mark and Plan.LecturerId = :LecturerId

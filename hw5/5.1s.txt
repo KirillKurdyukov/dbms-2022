@@ -1,0 +1,6 @@
+select StudentName, CourseName from (
+select distinct StudentId, CourseName from Students
+natural join Plan
+natural join Courses
+) SICN
+natural join Students

@@ -1,0 +1,11 @@
+select StudentName, CourseName from (
+select distinct Students.StudentId, CourseName
+from Students
+natural join Plan
+natural join Courses
+left join Marks
+on Students.StudentId = Marks.StudentId
+and Plan.CourseId = Marks.CourseId
+where Marks.Mark is null
+) SC
+natural join Students

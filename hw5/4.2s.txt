@@ -1,0 +1,8 @@
+select distinct Students.StudentId, StudentName, GroupId
+from Students
+natural join Plan
+natural join Courses
+left join Marks
+on Students.StudentId = Marks.StudentId
+and Plan.CourseId = Marks.CourseId
+where Courses.CourseName = :CourseName and Marks.Mark is null

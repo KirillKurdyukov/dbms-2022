@@ -1,0 +1,2 @@
+π{StudentName, CourseName}
+(σ{(Mark = null)}((Students ⋈ Plan ⋈ Courses) ⟕ Marks))
