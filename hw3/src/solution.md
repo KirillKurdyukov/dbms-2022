@@ -3,7 +3,7 @@
 Дано отношение с атрибутами StudentId, 
 StudentName, GroupId, GroupName, CourseId, CourseName, LecturerId, LecturerName, Mark.
 
-###Задание 1.
+### Задание 1.
 
 1. StudentId -> StudentName, GroupId, GroupName
 2. LecturerId -> LecturerName
@@ -13,7 +13,7 @@ StudentName, GroupId, GroupName, CourseId, CourseName, LecturerId, LecturerName,
 6. StudentId, CourseId -> Mark
 7. GroupName -> GroupId // Уникальное имя группы
 
-###Задание 2.
+### Задание 2.
 
 { StudentId, StudentName, GroupId, GroupName, CourseId, CourseName, LecturerId, LecturerName, Mark }
 
